@@ -1,7 +1,23 @@
 import algorithm
+import treatring_data as t_data
 
-estate_origin = input("\nEm qual estação você está?\n")
+station_origin = t_data.get_number(input("\nEm qual estação você está?\n"))
 
-estate_destination = input("\nPara qual estação você deseja ir?\n")
+line_origin = t_data.get_line(station_origin, "origem")
 
-melhor_caminho = algorithm.heuristic_search(estate_origin, estate_destination)
+station_destination = t_data.get_number(input("\nPara qual estação você deseja ir?\n"))
+
+line_destination = t_data.get_line(station_destination, "destino")
+
+try:
+    melhor_caminho, time = algorithm.heuristic_search(station_origin,
+                                                  station_destination,
+                                                  line_origin,
+                                                  line_destination)
+except TypeError:
+    print("Error")
+
+a = melhor_caminho
+
+print(f"\n\nO melhor caminho é visitando as seguintes estações: {str(a)[1:-1]}. O tempo total da viagem será: {time} minutos.")
+
