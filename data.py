@@ -65,7 +65,7 @@ distancias_reais_duplo = [{(2, 'azul'): 10, (2, 'amarela'): 10},
 linhas_estacoes = {"azul": [1, 2, 3, 4, 5, 6], 
                    "amarela": [2, 5, 7, 8, 9, 10],
                    "verde": [4, 8, 12, 13, 14],
-                   "vermelha": [3, 9, 11, 14]}
+                   "vermelha": [3, 9, 11, 13, 14]}
 
 #index+1: estacao, valores: linhas
 estacoes_linhas = [["azul"],
