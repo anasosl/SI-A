@@ -81,7 +81,7 @@ estacoes_linhas = [["azul"],
                    ["vermelha"], 
                    ["verde"], 
                    ["verde", "vermelha"], 
-                   ["verde", "vermelha"]]
+                   ["verde"]]
 
 #km/min
 velocidade_media = 0.5

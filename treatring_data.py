@@ -32,7 +32,12 @@ def get_line(s_o, type_stantion):
        question += "Qual dessas você está?\n"
     else:
        question += "Para qual dessas você quer ir?\n"
-    return input(question)
+    line = input(question)
+    while(True):
+      if line in data.linhas_estacoes and (s_origin in data.linhas_estacoes[line]):
+        return line
+      else:
+        line = input("\nLinha inválida. Por favor digitar uma das citadas.\n")
   else:
     print(f"\nSua linha de {type_stantion} é a {data.estacoes_linhas[s_origin-1][0]}!")
     return data.estacoes_linhas[s_origin-1][0]
